@@ -1,0 +1,874 @@
+'source.lua':
+    'bit.arshift':
+        prefix: 'bit.arshift'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/bit#bit-arshift'
+        description: '''
+            Returns the bitwise arithmetic right-shift of its first argument by the number of bits given by the second argument.
+            Arithmetic right-shift treats the most-significant bit as a sign bit and replicates it.
+            Only the lower 5 bits of the shift count are used (reduces to the range [0..31]).
+        '''
+        body: 'bit.arshift(x, n)'
+    'bit.band':
+        prefix: 'bit.band'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/bit#bit-band'
+        description: 'Returns the bitwise and of all of its arguments. Note that more than two arguments are allowed.'
+        body: 'bit.band(x1, x2, ...)'
+    'bit.bnot':
+        prefix: 'bit.bnot'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/bit#bit-bnot'
+        description: 'Returns the bitwise not of its argument.'
+        body: 'bit.bnot(x)'
+    'bit.bor':
+        prefix: 'bit.bor'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/bit#bit-bor'
+        description: 'Returns the bitwise or of all of its arguments. Note that more than two arguments are allowed.'
+        body: 'bit.bor(x1, x2, ...)'
+    'bit.bswap':
+        prefix: 'bit.bswap'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/bit#bit-bswap'
+        description: 'Swaps the bytes of its argument and returns it. This can be used to convert little-endian 32 bit numbers to big-endian 32 bit numbers or vice versa.'
+        body: 'bit.bswap(x)'
+    'bit.bxor':
+        prefix: 'bit.bxor'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/bit#bit-bxor'
+        description: 'Returns the bitwise xor of all of its arguments. Note that more than two arguments are allowed.'
+        body: 'bit.bxor(x1, [x2...])'
+    'bit.lshift':
+        prefix: 'bit.lshift'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/bit#bit-lshift'
+        description: '''
+            Returns the bitwise logical left-shift of its first argument by the number of bits given by the second argument.
+            Logical shifts treat the first argument as an unsigned number and shift in 0-bits.
+            Only the lower 5 bits of the shift count are used (reduces to the range [0..31]).
+        '''
+        body: 'bit.lshift(x, n)'
+    'bit.rol':
+        prefix: 'bit.rol'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/bit#bit-rol'
+        description: '''
+            Returns the bitwise left rotation of its first argument by the number of bits given by the second argument. Bits shifted out on one side are shifted back in on the other side.
+            Only the lower 5 bits of the rotate count are used (reduces to the range [0..31]).
+        '''
+        body: 'bit.rol(x, n)'
+    'bit.ror':
+        prefix: 'bit.ror'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/bit#bit-ror'
+        description: '''
+            Returns the bitwise right rotation of its first argument by the number of bits given by the second argument. Bits shifted out on one side are shifted back in on the other side.
+            Only the lower 5 bits of the rotate count are used (reduces to the range [0..31]).
+        '''
+        body: 'bit.ror(x, n)'
+    'bit.rshift':
+        prefix: 'bit.rshift'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/bit#bit-rshift'
+        description: '''
+            Returns the bitwise logical right-shift of its first argument by the number of bits given by the second argument.
+            Logical shifts treat the first argument as an unsigned number and shift in 0-bits.
+            Only the lower 5 bits of the shift count are used (reduces to the range [0..31]).
+        '''
+        body: 'bit.rshift(x, n)'
+    'bit.tobit':
+        prefix: 'bit.tobit'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/bit#bit-tobit'
+        description: 'Normalizes a number to the numeric range for bit operations and returns it. This function is usually not needed since all bit operations already normalize all of their input arguments.'
+        body: 'bit.tobit(x)'
+    'bit.tohex':
+        prefix: 'bit.tohex'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/bit#bit-tohex'
+        description: 'Converts its first argument to a hex string. The number of hex digits is given by the absolute value of the optional second argument. Positive numbers between 1 and 8 generate lowercase hex digits. Negative numbers generate uppercase hex digits. Only the least-significant 4*|n| bits are used. The default is to generate 8 lowercase hex digits.'
+        body: 'bit.tohex(x, n)'
+    'client.camera_angles':
+        prefix: 'client.camera_angles'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-camera_angles'
+        description: 'Get or set camera angles'
+        body: 'client.camera_angles(pitch, yaw)'
+    'client.camera_position':
+        prefix: 'client.camera_position'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-camera_position'
+        description: "Returns x, y, z world coordinates of the game's camera position, or nil on failure."
+        body: 'client.camera_position()'
+    'client.color_log':
+        prefix: 'client.color_log'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-color_log'
+        description: 'Logs a colored message to console. End the string with \\0 to prevent it from adding a newline.'
+        body: 'client.color_log(r, g, b, msg, ...)'
+    'client.create_interface':
+        prefix: 'client.create_interface'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-create_interface'
+        description: 'Returns a pointer to the interface, or nil on failure.'
+        body: 'client.create_interface(module_name, interface_name)'
+    'client.delay_call':
+        prefix: 'client.delay_call'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-delay_call'
+        description: 'Executes the callback after delay seconds, passing the arguments to it.'
+        body: 'client.delay_call(delay, callback, ...)'
+    'client.draw_debug_text':
+        prefix: 'client.draw_debug_text'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-draw_debug_text'
+        description: 'Avoid calling this during the paint event.'
+        body: 'client.draw_debug_text(x, y, z, line_offset, duration, r, g, b, a, ...)'
+    'client.draw_hitboxes':
+        prefix: 'client.draw_hitboxes'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-draw_hitboxes'
+        description: 'Draws hitbox overlays. Avoid calling this during the paint event.'
+        body: 'client.draw_hitboxes(entindex, duration, hitboxes, r, g, b, a, tick)'
+    'client.error_log':
+        prefix: 'client.error_log'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-error_log'
+        body: 'client.error_log(msg)'
+    'client.exec':
+        prefix: 'client.exec'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-exec'
+        description: "Executes a console command. Multiple commands can be combined with ';'. Be careful when passing user input (including usernames) to it."
+        body: 'client.exec(cmd, ...)'
+    'client.eye_position':
+        prefix: 'client.eye_position'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-eye_position'
+        description: "Returns x, y, z world coordinates of the local player's eye position, or nil on failure."
+        body: 'client.eye_position()'
+    'client.find_signature':
+        prefix: 'client.find_signature'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-find_signature'
+        description: 'Finds the specified pattern and returns a pointer to it, or nil if not found.'
+        body: 'client.find_signature(module_name, pattern)'
+    'client.get_model_name':
+        prefix: 'client.get_model_name'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-get_model_name'
+        description: 'Returns model name, or nil on failure.'
+        body: 'client.get_model_name(model_index)'
+    'client.key_state':
+        prefix: 'client.key_state'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-key_state'
+        description: 'Returns true if the key is pressed, or nil on failure'
+        body: 'client.key_state(key)'
+    'client.latency':
+        prefix: 'client.latency'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-latency'
+        description: 'Returns your latency in seconds.'
+        body: 'client.latency()'
+    'client.log':
+        prefix: 'client.log'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-log'
+        description: 'Logs a message to console in the [gamesense] format.'
+        body: 'client.log(msg, ...)'
+    'client.random_float':
+        prefix: 'client.random_float'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-random_float'
+        description: 'Returns a random float between minimum and maximum.'
+        body: 'client.random_float(minimum, maximum)'
+    'client.random_int':
+        prefix: 'client.random_int'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-random_int'
+        description: 'Returns a random integer between minimum and maximum.'
+        body: 'client.random_int(minimum, maximum)'
+    'client.register_esp_flag':
+        prefix: 'client.register_esp_flag'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-register_esp_flag'
+        description: 'Requires "Flags" is enabled in Player ESP'
+        body: 'client.register_esp_flag(flag, r, g, b, callback)'
+    'client.reload_active_scripts':
+        prefix: 'client.reload_active_scripts'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-reload_active_scripts'
+        description: 'Reloads all scripts the following frame.'
+        body: 'client.reload_active_scripts()'
+    'client.scale_damage':
+        prefix: 'client.scale_damage'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-scale_damage'
+        description: 'Returns adjusted damage for the specified hitgroup'
+        body: 'client.scale_damage(entindex, hitgroup, damage)'
+    'client.screen_size':
+        prefix: 'client.screen_size'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-screen_size'
+        description: 'Returns (width, height).'
+        body: 'client.screen_size()'
+    'client.set_clan_tag':
+        prefix: 'client.set_clan_tag'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-set_clan_tag'
+        description: 'The clan tag is removed if no argument is passed or if it is an empty string. Additional arguments will be concatenated similar to client.log.'
+        body: 'client.set_clan_tag(...)'
+    'client.set_event_callback':
+        prefix: 'client.set_event_callback'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-set_event_callback'
+        description: 'Raises an error and prints a message in console upon failure.'
+        body: 'client.set_event_callback(event_name, callback)'
+    'client.system_time':
+        prefix: 'client.system_time'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-system_time'
+        description: 'Returns windows time as (hours, minutes, seconds, milliseconds)'
+        body: 'client.system_time()'
+    'client.timestamp':
+        prefix: 'client.timestamp'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-timestamp'
+        description: 'Returns high precision timestamp in milliseconds.'
+        body: 'client.timestamp()'
+    'client.trace_bullet':
+        prefix: 'client.trace_bullet'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-trace_bullet'
+        description: 'Returns entindex, damage. Entindex is nil when no player is hit or if players are skipped.'
+        body: 'client.trace_bullet(from_player, from_x, from_y, from_z, to_x, to_y, to_z, skip_players)'
+    'client.trace_line':
+        prefix: 'client.trace_line'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-trace_line'
+        description: 'Returns fraction, entindex. fraction is a percentage in the range [0.0, 1.0] that tells you how far the trace went before hitting something, so 1.0 means nothing was hit. entindex is the entity index that hit, or -1 if no entity was hit.'
+        body: 'client.trace_line(skip_entindex, from_x, from_y, from_z, to_x, to_y, to_z)'
+    'client.unix_time':
+        prefix: 'client.unix_time'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-unix_time'
+        description: 'Returns current windows time as [unix time / epoch time](https://en.wikipedia.org/wiki/Unix_time) (seconds since 1 January 1970 00:00:00)'
+        body: 'client.unix_time()'
+    'client.unset_event_callback':
+        prefix: 'client.unset_event_callback'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-unset_event_callback'
+        description: 'Removes a callback that was previously set using set_event_callback'
+        body: 'client.unset_event_callback(event_name, callback)'
+    'client.update_player_list':
+        prefix: 'client.update_player_list'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-update_player_list'
+        description: 'Updates the player list tab without having to open it.'
+        body: 'client.update_player_list()'
+    'client.userid_to_entindex':
+        prefix: 'client.userid_to_entindex'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-userid_to_entindex'
+        description: 'Returns the entity index, or 0 on failure.'
+        body: 'client.userid_to_entindex(userid)'
+    'client.visible':
+        prefix: 'client.visible'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/client#client-visible'
+        description: "Returns true if the position is visible. For example, you could use a player's origin to see if they are visible."
+        body: 'client.visible(x, y, z)'
+    'config.export':
+        prefix: 'config.export'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/config#config-export'
+        description: 'Returns the current config as a string'
+        body: 'config.export()'
+    'config.load':
+        prefix: 'config.load'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/config#config-load'
+        description: "To load the specified config: config.load('Config name here') To load a tab from the specified config: config.load('Config name here', 'Tab name here') To load a container from the specified config: config.load('Config name here', 'Tab name here', 'Container name here')"
+        body: 'config.load(name, tab, container)'
+    'cvar_object:get_float':
+        prefix: 'cvar_object:get_float'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/cvar#cvar_object:get_float'
+        description: 'Returns nil if called on a ConCommand.'
+        body: 'cvar_object:get_float()'
+    'cvar_object:get_int':
+        prefix: 'cvar_object:get_int'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/cvar#cvar_object:get_int'
+        description: 'Returns nil if called on a ConCommand.'
+        body: 'cvar_object:get_int()'
+    'cvar_object:get_string':
+        prefix: 'cvar_object:get_string'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/cvar#cvar_object:get_string'
+        description: 'Returns nil on failure.'
+        body: 'cvar_object:get_string()'
+    'cvar_object:invoke_callback':
+        prefix: 'cvar_object:invoke_callback'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/cvar#cvar_object:invoke_callback'
+        description: 'Executes a ConCommand or cvar callback, passing its arguments to it'
+        body: 'cvar_object:invoke_callback(...)'
+    'cvar_object:set_float':
+        prefix: 'cvar_object:set_float'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/cvar#cvar_object:set_float'
+        description: 'Sets the int, float and string value to the passed float. Invokes the change callback'
+        body: 'cvar_object:set_float(value)'
+    'cvar_object:set_int':
+        prefix: 'cvar_object:set_int'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/cvar#cvar_object:set_int'
+        description: 'Sets the int, float and string value to the passed float. Invokes the change callback'
+        body: 'cvar_object:set_int(value)'
+    'cvar_object:set_raw_float':
+        prefix: 'cvar_object:set_raw_float'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/cvar#cvar_object:set_raw_float'
+        description: 'This sets the float value without changing the integer and string values.'
+        body: 'cvar_object:set_raw_float(value)'
+    'cvar_object:set_raw_int':
+        prefix: 'cvar_object:set_raw_int'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/cvar#cvar_object:set_raw_int'
+        description: 'This sets the integer value without changing the float and string values.'
+        body: 'cvar_object:set_raw_int(value)'
+    'cvar_object:set_string':
+        prefix: 'cvar_object:set_string'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/cvar#cvar_object:set_string'
+        description: 'Sets the int, float and string value to the passed float. Invokes the change callback'
+        body: 'cvar_object:set_string(value)'
+    'database.read':
+        prefix: 'database.read'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/database#database-read'
+        description: 'Gets a value from the database'
+        body: 'database.read(key_name)'
+    'database.write':
+        prefix: 'database.write'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/database#database-write'
+        description: "Writes a value to the database. Avoid calling this often. For example, call read at script load, then call write during the 'shutdown' event"
+        body: 'database.write(key_name, value)'
+    'entity.get_all':
+        prefix: 'entity.get_all'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-get_all'
+        description: 'Returns an array of entity indices. Pass no arguments for all entities.'
+        body: 'entity.get_all(classname)'
+    'entity.get_bounding_box':
+        prefix: 'entity.get_bounding_box'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-get_bounding_box'
+        description: 'Returns x1, y1, x2, y2, alpha_multiplier. The contents of x1, y1, x2, y2 must be ignored when alpha_multiplier is zero, which indicates that the bounding box is invalid and should not be drawn.'
+        body: 'entity.get_bounding_box(player)'
+    'entity.get_classname':
+        prefix: 'entity.get_classname'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-get_classname'
+        description: "Returns the name of the entity's class, or nil on failure."
+        body: 'entity.get_classname(ent)'
+    'entity.get_esp_data':
+        prefix: 'entity.get_esp_data'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-get_esp_data'
+        description: 'Returns a table containing alpha, health, and weapon_id, or nil on failure.'
+        body: 'entity.get_esp_data(player)'
+    'entity.get_game_rules':
+        prefix: 'entity.get_game_rules'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-get_game_rules'
+        description: 'Returns entity index of CCSGameRulesProxy instance, or nil if none exists.'
+        body: 'entity.get_game_rules()'
+    'entity.get_local_player':
+        prefix: 'entity.get_local_player'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-get_local_player'
+        description: 'Returns the entity index for the local player, or nil on failure.'
+        body: 'entity.get_local_player()'
+    'entity.get_origin':
+        prefix: 'entity.get_origin'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-get_origin'
+        description: 'Returns the x, y, z coordinates of the entity. Only works for non-dormant entities, except for players, where it will return the dormant esp origin'
+        body: 'entity.get_origin(ent)'
+    'entity.get_player_name':
+        prefix: 'entity.get_player_name'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-get_player_name'
+        description: 'Returns the player\'s name, or the string "unknown" on failure.'
+        body: 'entity.get_player_name(ent)'
+    'entity.get_player_resource':
+        prefix: 'entity.get_player_resource'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-get_player_resource'
+        description: 'Returns entity index of CCSPlayerResource instance, or nil if none exists.'
+        body: 'entity.get_player_resource()'
+    'entity.get_player_weapon':
+        prefix: 'entity.get_player_weapon'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-get_player_weapon'
+        description: "Returns the entity index of the player's active weapon, or nil if the player is not alive, dormant, etc."
+        body: 'entity.get_player_weapon(ent)'
+    'entity.get_players':
+        prefix: 'entity.get_players'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-get_players'
+        description: 'Returns an array of player entity indices. Dormant and dead players will not be added to the list.'
+        body: 'entity.get_players(enemies_only)'
+    'entity.get_prop':
+        prefix: 'entity.get_prop'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-get_prop'
+        description: 'Returns the value of the property, or nil on failure. For vectors or angles, this returns three values.'
+        body: 'entity.get_prop(ent, propname, array_index)'
+    'entity.get_steam64':
+        prefix: 'entity.get_steam64'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-get_steam64'
+        description: 'Returns steamID3, or nil on failure.'
+        body: 'entity.get_steam64(player)'
+    'entity.hitbox_position':
+        prefix: 'entity.hitbox_position'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-hitbox_position'
+        description: 'Returns world coordinates x, y, z, or nil on failure.'
+        body: 'entity.hitbox_position(player, hitbox)'
+    'entity.is_alive':
+        prefix: 'entity.is_alive'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-is_alive'
+        description: 'Returns true if the player is not dead.'
+        body: 'entity.is_alive(ent)'
+    'entity.is_dormant':
+        prefix: 'entity.is_dormant'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-is_dormant'
+        description: 'Returns true if the entity is dormant.'
+        body: 'entity.is_dormant(ent)'
+    'entity.is_enemy':
+        prefix: 'entity.is_enemy'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-is_enemy'
+        description: 'Returns true if the entity is on the other team.'
+        body: 'entity.is_enemy(ent)'
+    'entity.set_prop':
+        prefix: 'entity.set_prop'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/entity#entity-set_prop'
+        description: 'Sets the value of the property. For vectors or angles, pass three values.'
+        body: 'entity.set_prop(ent, propname, value, array_index)'
+    'globals.absoluteframetime':
+        prefix: 'globals.absoluteframetime'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/globals#globals-absoluteframetime'
+        description: 'Returns the number of seconds elapsed during the last game frame.'
+        body: 'globals.absoluteframetime()'
+    'globals.chokedcommands':
+        prefix: 'globals.chokedcommands'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/globals#globals-chokedcommands'
+        description: "Returns the number of choked commands, i.e. the number of commands that haven't yet been sent to the server."
+        body: 'globals.chokedcommands()'
+    'globals.commandack':
+        prefix: 'globals.commandack'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/globals#globals-commandack'
+        description: 'Returns the command number of the most recent server-acknowledged command.'
+        body: 'globals.commandack()'
+    'globals.curtime':
+        prefix: 'globals.curtime'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/globals#globals-curtime'
+        description: 'Returns the game time in seconds. This number is synchronized with the server.'
+        body: 'globals.curtime()'
+    'globals.framecount':
+        prefix: 'globals.framecount'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/globals#globals-framecount'
+        description: 'Returns the number of frames since the game started'
+        body: 'globals.framecount()'
+    'globals.frametime':
+        prefix: 'globals.frametime'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/globals#globals-frametime'
+        description: 'Returns the number of seconds elapsed during the last game frame.'
+        body: 'globals.frametime()'
+    'globals.lastoutgoingcommand':
+        prefix: 'globals.lastoutgoingcommand'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/globals#globals-lastoutgoingcommand'
+        description: 'Returns the command number of the last outgoing command.'
+        body: 'globals.lastoutgoingcommand()'
+    'globals.mapname':
+        prefix: 'globals.mapname'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/globals#globals-mapname'
+        description: 'Returns the name of the loaded map, or nil if you are not in game.'
+        body: 'globals.mapname()'
+    'globals.maxplayers':
+        prefix: 'globals.maxplayers'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/globals#globals-maxplayers'
+        description: 'Returns the maximum number of players in the server.'
+        body: 'globals.maxplayers()'
+    'globals.oldcommandack':
+        prefix: 'globals.oldcommandack'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/globals#globals-oldcommandack'
+        description: 'Returns the command number of the previous server-acknowledged command.'
+        body: 'globals.oldcommandack()'
+    'globals.realtime':
+        prefix: 'globals.realtime'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/globals#globals-realtime'
+        description: 'Returns the local time in seconds.'
+        body: 'globals.realtime()'
+    'globals.tickcount':
+        prefix: 'globals.tickcount'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/globals#globals-tickcount'
+        description: 'Returns the number of ticks elapsed in the server.'
+        body: 'globals.tickcount()'
+    'globals.tickinterval':
+        prefix: 'globals.tickinterval'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/globals#globals-tickinterval'
+        description: 'Returns the time elapsed in one game tick in seconds.'
+        body: 'globals.tickinterval()'
+    'json.decode_invalid_numbers':
+        prefix: 'json.decode_invalid_numbers'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/json#json-decode_invalid_numbers'
+        description: 'Lua CJSON may generate an error when trying to decode numbers not supported by the JSON specification. Invalid numbers are defined as: infinity, not-a-number (NaN) or hexadecimal. The current value wil always be returned.'
+        body: 'json.decode_invalid_numbers(setting)'
+    'json.decode_max_depth':
+        prefix: 'json.decode_max_depth'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/json#json-decode_max_depth'
+        description: 'Lua CJSON will generate an error when parsing deeply nested JSON once the maximum array/object depth has been exceeded. This check prevents unnecessarily complicated JSON from slowing down the application, or crashing the application due to lack of process stack space.'
+        body: 'json.decode_max_depth(setting)'
+    'json.encode_invalid_numbers':
+        prefix: 'json.encode_invalid_numbers'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/json#json-encode_invalid_numbers'
+        description: 'Lua CJSON may generate an error when encoding floating point numbers not supported by the JSON specification (invalid numbers): infinity, not-a-number (NaN)'
+        body: 'json.encode_invalid_numbers(setting)'
+    'json.encode_keep_buffer':
+        prefix: 'json.encode_keep_buffer'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/json#json-encode_keep_buffer'
+        description: 'Lua CJSON can reuse the JSON encoding buffer to improve performance.'
+        body: 'json.encode_keep_buffer(setting)'
+    'json.encode_max_depth':
+        prefix: 'json.encode_max_depth'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/json#json-encode_max_depth'
+        description: 'Once the maximum table depth has been exceeded Lua CJSON will generate an error. This prevents a deeply nested or recursive data structure from crashing the application.'
+        body: 'json.encode_max_depth(depth)'
+    'json.encode_number_precision':
+        prefix: 'json.encode_number_precision'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/json#json-encode_number_precision'
+        description: 'The amount of significant digits returned by Lua CJSON when encoding numbers can be changed to balance accuracy versus performance. For data structures containing many numbers, setting cjson.encode_number_precision to a smaller integer, for example 3, can improve encoding performance by up to 50%.'
+        body: 'json.encode_number_precision(precision)'
+    'json.encode_sparse_array':
+        prefix: 'json.encode_sparse_array'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/json#json-encode_sparse_array'
+        description: 'Lua CJSON classifies a Lua table into one of three kinds when encoding a JSON array. This is determined by the number of values missing from the Lua array as follows:'
+        body: 'json.encode_sparse_array(convert, ratio, safe)'
+    'json.parse':
+        prefix: 'json.parse'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/json#json-parse'
+        description: 'json.parse will deserialise any UTF-8 JSON string into a Lua value or table. null will be converted to a NULL lightuserdata value. This can be compared with cjson.null for convenience.'
+        body: 'json.parse(json_text)'
+    'json.stringify':
+        prefix: 'json.stringify'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/json#json-stringify'
+        description: 'Will serialise a Lua value into a string containing the JSON representation.'
+        body: 'json.stringify(value)'
+    'material_object:alpha_modulate':
+        prefix: 'material_object:alpha_modulate'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#material_object:alpha_modulate'
+        description: "Overrides the alpha of the material object it's called on. Doesn't work with some materials"
+        body: 'material_object:alpha_modulate(a)'
+    'materialsystem.arms_material':
+        prefix: 'materialsystem.arms_material'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#materialsystem-arms_material'
+        description: "Returns a reference to the arms material when 'Viewmodel arms' is enabled"
+        body: 'materialsystem.arms_material()'
+    'materialsystem.chams_material':
+        prefix: 'materialsystem.chams_material'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#materialsystem-chams_material'
+        description: 'Returns a reference to the player chams material'
+        body: 'materialsystem.chams_material()'
+    'material_object:color_modulate':
+        prefix: 'material_object:color_modulate'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#material_object:color_modulate'
+        description: "Overrides the color of the material object it's called on. Doesn't work with some materials"
+        body: 'material_object:color_modulate(r, g, b)'
+    'materialsystem.find_material':
+        prefix: 'materialsystem.find_material'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#materialsystem-find_material'
+        description: 'Returns a reference to the material'
+        body: 'materialsystem.find_material(path, force_load)'
+    'materialsystem.find_materials':
+        prefix: 'materialsystem.find_materials'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#materialsystem-find_materials'
+        description: 'Returns a table of references to materials that have partial_path in their name'
+        body: 'materialsystem.find_materials(partial_path, force_load)'
+    'materialsystem.find_texture':
+        prefix: 'materialsystem.find_texture'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#materialsystem-find_texture'
+        description: 'Returns a reference to the texture that can be used with set_shader_param'
+        body: 'materialsystem.find_texture(path)'
+    'material_object:get_material_var_flag':
+        prefix: 'material_object:get_material_var_flag'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#material_object:get_material_var_flag'
+        description: 'Returns the boolean value of the material var flag'
+        body: 'material_object:get_material_var_flag(material_var_flag)'
+    'materialsystem.get_model_materials':
+        prefix: 'materialsystem.get_model_materials'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#materialsystem-get_model_materials'
+        description: 'Returns a table of references to materials used by the entity'
+        body: 'materialsystem.get_model_materials(entindex)'
+    'material_object:get_name':
+        prefix: 'material_object:get_name'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#material_object:get_name'
+        description: 'Returns name of the material'
+        body: 'material_object:get_name()'
+    'material_object:get_shader_param':
+        prefix: 'material_object:get_shader_param'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#material_object:get_shader_param'
+        description: 'Returns the value of the shader param or nil'
+        body: 'material_object:get_shader_param(shader_param)'
+    'materialsystem.override_material':
+        prefix: 'materialsystem.override_material'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#materialsystem-override_material'
+        description: 'Overrides all of a material properties with another material.'
+        body: 'materialsystem.override_material(material, material_new)'
+    'material_object:reload':
+        prefix: 'material_object:reload'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#material_object:reload'
+        description: "Restores the original material properties of the material it's called on."
+        body: 'material_object:reload()'
+    'material_object:set_material_var_flag':
+        prefix: 'material_object:set_material_var_flag'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#material_object:set_material_var_flag'
+        description: 'Sets the value of the material var flag of the material'
+        body: 'material_object:set_material_var_flag(material_var_flag, value)'
+    'material_object:set_shader_param':
+        prefix: 'material_object:set_shader_param'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/materialsystem#material_object:set_shader_param'
+        description: 'Sets the value of the shader param of the material'
+        body: 'material_object:set_shader_param(shader_param, value)'
+    'panorama.loadstring':
+        prefix: 'panorama.loadstring'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/panorama#panorama-loadstring'
+        body: 'panorama.loadstring(js_code, panel)'
+    'panorama.open':
+        prefix: 'panorama.open'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/panorama#panorama-open'
+        body: 'panorama.open(panel)'
+    'plist.get':
+        prefix: 'plist.get'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/plist#plist-get'
+        body: 'plist.get(entindex, field)'
+    'plist.set':
+        prefix: 'plist.set'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/plist#plist-set'
+        body: 'plist.set(entindex, field, value)'
+    'renderer.circle':
+        prefix: 'renderer.circle'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-circle'
+        description: 'This can only be called from the paint callback.'
+        body: 'renderer.circle(x, y, r, g, b, a, radius, start_degrees, percentage)'
+    'renderer.circle_outline':
+        prefix: 'renderer.circle_outline'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-circle_outline'
+        description: 'This can only be called from the paint callback.'
+        body: 'renderer.circle_outline(x, y, r, g, b, a, radius, start_degrees, percentage, thickness)'
+    'renderer.gradient':
+        prefix: 'renderer.gradient'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-gradient'
+        description: 'This can only be called from the paint callback.'
+        body: 'renderer.gradient(x, y, w, h, r1, g1, b1, a1, r2, g2, b2, a2, ltr)'
+    'renderer.indicator':
+        prefix: 'renderer.indicator'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-indicator'
+        description: 'Returns the Y screen coordinate (vertical offset) of the drawn text, or nil on failure. This can only be called from the paint callback.'
+        body: 'renderer.indicator(r, g, b, a, ...)'
+    'renderer.line':
+        prefix: 'renderer.line'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-line'
+        description: 'This can only be called from the paint callback.'
+        body: 'renderer.line(xa, ya, xb, yb, r, g, b, a)'
+    'renderer.load_jpg':
+        prefix: 'renderer.load_jpg'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-load_jpg'
+        description: 'Loads a texture from raw JPG contents (with file header). Returns a texture ID that can be used with renderer.texture, or nil on failure'
+        body: 'renderer.load_jpg(contents, width, height)'
+    'renderer.load_png':
+        prefix: 'renderer.load_png'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-load_png'
+        description: 'Loads a texture from raw png contents (with file header). Returns a texture ID that can be used with renderer.texture, or nil on failure'
+        body: 'renderer.load_png(contents, width, height)'
+    'renderer.load_rgba':
+        prefix: 'renderer.load_rgba'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-load_rgba'
+        description: 'Loads a texture from a RGBA buffer. Returns a texture ID that can be used with renderer.texture, or nil on failure'
+        body: 'renderer.load_rgba(contents, width, height)'
+    'renderer.load_svg':
+        prefix: 'renderer.load_svg'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-load_svg'
+        description: 'Returns a texture ID that can be used with renderer.texture, or nil on failure'
+        body: 'renderer.load_svg(contents, width, height)'
+    'renderer.measure_text':
+        prefix: 'renderer.measure_text'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-measure_text'
+        description: 'Returns width, height. This can only be called from the paint callback.'
+        body: 'renderer.measure_text(flags, ...)'
+    'renderer.rectangle':
+        prefix: 'renderer.rectangle'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-rectangle'
+        description: 'This can only be called from the paint callback.'
+        body: 'renderer.rectangle(x, y, w, h, r, g, b, a)'
+    'renderer.text':
+        prefix: 'renderer.text'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-text'
+        description: 'This can only be called from the paint callback.'
+        body: 'renderer.text(x, y, r, g, b, a, flags, max_width, ...)'
+    'renderer.texture':
+        prefix: 'renderer.texture'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-texture'
+        description: 'Draws a texture from the texture id created from load_rgba, load_png, load_jpg or load_svg'
+        body: 'renderer.texture(id, x, y, w, h, r, g, b, a, mode)'
+    'renderer.triangle':
+        prefix: 'renderer.triangle'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-triangle'
+        description: 'This can only be called from the paint callback.'
+        body: 'renderer.triangle(x0, y0, x1, y1, x2, y2, r, g, b, a)'
+    'renderer.world_to_screen':
+        prefix: 'renderer.world_to_screen'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/renderer#renderer-world_to_screen'
+        description: 'Returns two screen coordinates (x, y), or nil if the world position is not visible on your screen. This can only be called from the paint callback.'
+        body: 'renderer.world_to_screen(x, y, z)'
+    'ui.get':
+        prefix: 'ui.get'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-get'
+        description: 'For a checkbox, returns true or false. For a slider, returns an integer. For a combobox, returns a string. For a multiselect combobox, returns an array of strings. For a hotkey, returns true if the hotkey is active. For a color picker, returns r, g, b, a. Throws an error on failure.'
+        body: 'ui.get(item)'
+    'ui.is_menu_open':
+        prefix: 'ui.is_menu_open'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-is_menu_open'
+        description: 'Returns true if the menu is currently open.'
+        body: 'ui.is_menu_open()'
+    'ui.menu_position':
+        prefix: 'ui.menu_position'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-menu_position'
+        description: 'Returns the x, y of the menu, even when closed.'
+        body: 'ui.menu_position()'
+    'ui.menu_size':
+        prefix: 'ui.menu_size'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-menu_size'
+        description: 'Returns the width, height of the menu, even when closed.'
+        body: 'ui.menu_size()'
+    'ui.mouse_position':
+        prefix: 'ui.mouse_position'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-mouse_position'
+        description: 'Returns current mouse coordinates x, y'
+        body: 'ui.mouse_position()'
+    'ui.name':
+        prefix: 'ui.name'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-name'
+        description: 'Returns the display name'
+        body: 'ui.name(item)'
+    'ui.new_button':
+        prefix: 'ui.new_button'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-new_button'
+        description: 'Throws an error on failure. The return value should not be used with ui.set or ui.get.'
+        body: 'ui.new_button(tab, container, name, callback)'
+    'ui.new_checkbox':
+        prefix: 'ui.new_checkbox'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-new_checkbox'
+        description: 'Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.'
+        body: 'ui.new_checkbox(tab, container, name)'
+    'ui.new_color_picker':
+        prefix: 'ui.new_color_picker'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-new_color_picker'
+        description: 'Throws an error on failure. The color picker is placed to the right of the previous menu item.'
+        body: 'ui.new_color_picker(tab, container, name, r, g, b, a)'
+    'ui.new_combobox':
+        prefix: 'ui.new_combobox'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-new_combobox'
+        description: 'Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.'
+        body: 'ui.new_combobox(tab, container, name, ...)'
+    'ui.new_hotkey':
+        prefix: 'ui.new_hotkey'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-new_hotkey'
+        description: 'Returns a special value that can be passed to ui.get to see if the hotkey is pressed, or throws an error on failure.'
+        body: 'ui.new_hotkey(tab, container, name, inline, default_hotkey)'
+    'ui.new_label':
+        prefix: 'ui.new_label'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-new_label'
+        description: 'Creates a new label, this can be used to make otherwise attached menu items standalone or have interactive menus. Returns a special value that can be passed to ui.set, or throws an error on failure.'
+        body: 'ui.new_label(tab, container, name)'
+    'ui.new_listbox':
+        prefix: 'ui.new_listbox'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-new_listbox'
+        description: 'Throws an error on failure. Returns a special value that can be used with ui.get. Calling ui.get on a listbox will return the zero-based index of the currently selected string.'
+        body: 'ui.new_listbox(tab, container, name, items)'
+    'ui.new_multiselect':
+        prefix: 'ui.new_multiselect'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-new_multiselect'
+        description: 'Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.'
+        body: 'ui.new_multiselect(tab, container, name, ...)'
+    'ui.new_slider':
+        prefix: 'ui.new_slider'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-new_slider'
+        description: 'Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.'
+        body: 'ui.new_slider(tab, container, name, min, max, init_value, show_tooltip, unit, scale, tooltips)'
+    'ui.new_string':
+        prefix: 'ui.new_string'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-new_string'
+        description: 'Creates a string UI element, can be used to store arbitrary strings in configs. No menu item is created but it has the same semantics as other ui.new_* functions. Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.'
+        body: 'ui.new_string(name, default_value)'
+    'ui.new_textbox':
+        prefix: 'ui.new_textbox'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-new_textbox'
+        description: 'Throws an error on failure. Returns a special value that can be used with ui.get'
+        body: 'ui.new_textbox(tab, container, name)'
+    'ui.reference':
+        prefix: 'ui.reference'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-reference'
+        description: 'Avoid calling this from inside a function. Returns a reference that can be passed to ui.get and ui.set, or throws an error on failure. This allows you to access a built-in pre-existing menu items. This function returns multiple values when the specified menu item is followed by unnamed menu items, for example a color picker or a hotkey.'
+        body: 'ui.reference(tab, container, name)'
+    'ui.set':
+        prefix: 'ui.set'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-set'
+        description: "For checkboxes, pass true or false. For a slider, pass a number that is within the slider's minimum/maximum values. For a combobox, pass a string value. For a multiselect combobox, pass zero or more strings. For referenced buttons, value is ignored and the button's callback is invoked. For color pickers, pass the arguments r, g, b, a."
+        body: 'ui.set(item, value, ...)'
+    'ui.set_callback':
+        prefix: 'ui.set_callback'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-set_callback'
+        description: 'Sets the change callback of a custom menu item. It will be executed on change and passed the reference'
+        body: 'ui.set_callback(item, callback)'
+    'ui.set_visible':
+        prefix: 'ui.set_visible'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-set_visible'
+        description: 'Sets the visibility of the menu item'
+        body: 'ui.set_visible(item, visible)'
+    'ui.update':
+        prefix: 'ui.update'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/ui#ui-update'
+        description: 'Creates a string UI element, can be used to store arbitrary strings in configs. No menu item is created but it has the same semantics as other ui.new_* functions. Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.'
+        body: 'ui.update(item, value, ...)'
+    'vector_object:angles':
+        prefix: 'vector_object:angles'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:angles'
+        description: 'Converts the vector to an angle and returns the pitch, yaw and roll'
+        body: 'vector_object:angles()'
+    'vector_object:dist2d':
+        prefix: 'vector_object:dist2d'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:dist2d'
+        description: 'Returns the cross product / vector product of itself and another vector'
+        body: 'vector_object:dist2d(other)'
+    'vector_object:dist':
+        prefix: 'vector_object:dist'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:dist'
+        description: 'Returns the 2d distance to another vector'
+        body: 'vector_object:dist(other)'
+    'vector_object:dot':
+        prefix: 'vector_object:dot'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:dot'
+        description: 'Returns the dot product of the vector'
+        body: 'vector_object:dot()'
+    'vector_object:init':
+        prefix: 'vector_object:init'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:init'
+        description: 'Overwrites the X, Y and Z coordinates of the vector object, returning itself'
+        body: 'vector_object:init(x, y, z)'
+    'vector_object:init_from_angles':
+        prefix: 'vector_object:init_from_angles'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:init_from_angles'
+        description: 'Converts the pitch, yaw and roll passed to a forward vector and overwrites the X, Y and Z coordinates with that. Returns itself'
+        body: 'vector_object:init_from_angles(pitch, yaw, roll)'
+    'vector_object:length':
+        prefix: 'vector_object:length'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:length'
+        description: 'Returns the length (magnitude)'
+        body: 'vector_object:length()'
+    'vector_object:length2d':
+        prefix: 'vector_object:length2d'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:length2d'
+        description: 'Returns the 2d length (X and Y components)'
+        body: 'vector_object:length2d()'
+    'vector_object:length2dsqr':
+        prefix: 'vector_object:length2dsqr'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:length2dsqr'
+        description: 'Returns the squared 2d length (X and Y components, faster than :length2d)'
+        body: 'vector_object:length2dsqr()'
+    'vector_object:lengthsqr':
+        prefix: 'vector_object:lengthsqr'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:lengthsqr'
+        description: 'Returns the squared length (faster than :length)'
+        body: 'vector_object:lengthsqr()'
+    'vector_object:lerp':
+        prefix: 'vector_object:lerp'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:lerp'
+        description: 'Interpolates by the specified percentage between the 2 vectors.'
+        body: 'vector_object:lerp(to, percentage)'
+    'vector_object:normalize':
+        prefix: 'vector_object:normalize'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:normalize'
+        description: "Normalizes the vector, dividing it by it's own length (resulting in a unit vector with length = 1)"
+        body: 'vector_object:normalize()'
+    'vector_object:normalized':
+        prefix: 'vector_object:normalized'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:normalized'
+        description: "Returns a new unit vector, divided it by it's own length"
+        body: 'vector_object:normalized()'
+    'vector_object:scale':
+        prefix: 'vector_object:scale'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:scale'
+        description: 'Scales the vector by the specified value.'
+        body: 'vector_object:scale(scalar)'
+    'vector_object:scaled':
+        prefix: 'vector_object:scaled'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:scaled'
+        description: 'Returns a new vector, scaled by the specified value.'
+        body: 'vector_object:scaled(scalar)'
+    'vector_object:to':
+        prefix: 'vector_object:to'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:to'
+        description: 'Returns the forward vector from itself to another vector'
+        body: 'vector_object:to(other)'
+    'vector_object:unpack':
+        prefix: 'vector_object:unpack'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:unpack'
+        description: 'Returns the X, Y and Z coordinate of the vector object. They can also be accessed by vec.x, vec.y, etc'
+        body: 'vector_object:unpack()'
+    vector:
+        prefix: 'vector'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector'
+        description: 'Creates a new vector object. Please note that you need to load the built-in vector library with require "vector"'
+        body: 'vector(x, y, z)'
+    'vector_object:vectors':
+        prefix: 'vector_object:vectors'
+        descriptionMoreURL: 'https://gamesensical.gitbook.io/docs/developers/globals/vector#vector_object:vectors'
+        description: 'Returns the right and up vector of a forward vector'
+        body: 'vector_object:vectors()'

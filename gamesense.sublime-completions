@@ -1,0 +1,1038 @@
+{
+    "scope": "source.lua",
+    "completions": [
+        {
+            "trigger": "bit.arshift",
+            "kind": "function",
+            "details": "Returns the bitwise arithmetic right-shift of its first argument by the number of bits given by the second argument.\nArithmetic right-shift treats the most-significant bit as a sign bit and replicates it.\nOnly the lower 5 bits of the shift count are used (reduces to the range [0..31]).",
+            "contents": "bit.arshift(${1:x},${2:n})"
+        },
+        {
+            "trigger": "bit.band",
+            "kind": "function",
+            "details": "Returns the bitwise and of all of its arguments. Note that more than two arguments are allowed.",
+            "contents": "bit.band(${1:x1},${2:x2},${3:...})"
+        },
+        {
+            "trigger": "bit.bnot",
+            "kind": "function",
+            "details": "Returns the bitwise not of its argument.",
+            "contents": "bit.bnot(${1:x})"
+        },
+        {
+            "trigger": "bit.bor",
+            "kind": "function",
+            "details": "Returns the bitwise or of all of its arguments. Note that more than two arguments are allowed.",
+            "contents": "bit.bor(${1:x1},${2:x2},${3:...})"
+        },
+        {
+            "trigger": "bit.bswap",
+            "kind": "function",
+            "details": "Swaps the bytes of its argument and returns it. This can be used to convert little-endian 32 bit numbers to big-endian 32 bit numbers or vice versa.",
+            "contents": "bit.bswap(${1:x})"
+        },
+        {
+            "trigger": "bit.bxor",
+            "kind": "function",
+            "details": "Returns the bitwise xor of all of its arguments. Note that more than two arguments are allowed.",
+            "contents": "bit.bxor(${1:x1},${2:[x2...]})"
+        },
+        {
+            "trigger": "bit.lshift",
+            "kind": "function",
+            "details": "Returns the bitwise logical left-shift of its first argument by the number of bits given by the second argument.\nLogical shifts treat the first argument as an unsigned number and shift in 0-bits.\nOnly the lower 5 bits of the shift count are used (reduces to the range [0..31]).",
+            "contents": "bit.lshift(${1:x},${2:n})"
+        },
+        {
+            "trigger": "bit.rol",
+            "kind": "function",
+            "details": "Returns the bitwise left rotation of its first argument by the number of bits given by the second argument. Bits shifted out on one side are shifted back in on the other side.\nOnly the lower 5 bits of the rotate count are used (reduces to the range [0..31]).",
+            "contents": "bit.rol(${1:x},${2:n})"
+        },
+        {
+            "trigger": "bit.ror",
+            "kind": "function",
+            "details": "Returns the bitwise right rotation of its first argument by the number of bits given by the second argument. Bits shifted out on one side are shifted back in on the other side.\nOnly the lower 5 bits of the rotate count are used (reduces to the range [0..31]).",
+            "contents": "bit.ror(${1:x},${2:n})"
+        },
+        {
+            "trigger": "bit.rshift",
+            "kind": "function",
+            "details": "Returns the bitwise logical right-shift of its first argument by the number of bits given by the second argument.\nLogical shifts treat the first argument as an unsigned number and shift in 0-bits.\nOnly the lower 5 bits of the shift count are used (reduces to the range [0..31]).",
+            "contents": "bit.rshift(${1:x},${2:n})"
+        },
+        {
+            "trigger": "bit.tobit",
+            "kind": "function",
+            "details": "Normalizes a number to the numeric range for bit operations and returns it. This function is usually not needed since all bit operations already normalize all of their input arguments.",
+            "contents": "bit.tobit(${1:x})"
+        },
+        {
+            "trigger": "bit.tohex",
+            "kind": "function",
+            "details": "Converts its first argument to a hex string. The number of hex digits is given by the absolute value of the optional second argument. Positive numbers between 1 and 8 generate lowercase hex digits. Negative numbers generate uppercase hex digits. Only the least-significant 4*|n| bits are used. The default is to generate 8 lowercase hex digits.",
+            "contents": "bit.tohex(${1:x},${2:n})"
+        },
+        {
+            "trigger": "client.camera_angles",
+            "kind": "function",
+            "details": "Get or set camera angles",
+            "contents": "client.camera_angles(${1:pitch},${2:yaw})"
+        },
+        {
+            "trigger": "client.camera_position",
+            "kind": "function",
+            "details": "Returns x, y, z world coordinates of the game's camera position, or nil on failure.",
+            "contents": "client.camera_position()"
+        },
+        {
+            "trigger": "client.color_log",
+            "kind": "function",
+            "details": "Logs a colored message to console. End the string with \\0 to prevent it from adding a newline.",
+            "contents": "client.color_log(${1:r},${2:g},${3:b},${4:msg},${5:...})"
+        },
+        {
+            "trigger": "client.create_interface",
+            "kind": "function",
+            "details": "Returns a pointer to the interface, or nil on failure.",
+            "contents": "client.create_interface(${1:module_name},${2:interface_name})"
+        },
+        {
+            "trigger": "client.delay_call",
+            "kind": "function",
+            "details": "Executes the callback after delay seconds, passing the arguments to it.",
+            "contents": "client.delay_call(${1:delay},${2:callback},${3:...})"
+        },
+        {
+            "trigger": "client.draw_debug_text",
+            "kind": "function",
+            "details": "Avoid calling this during the paint event.",
+            "contents": "client.draw_debug_text(${1:x},${2:y},${3:z},${4:line_offset},${5:duration},${6:r},${7:g},${8:b},${9:a},${10:...})"
+        },
+        {
+            "trigger": "client.draw_hitboxes",
+            "kind": "function",
+            "details": "Draws hitbox overlays. Avoid calling this during the paint event.",
+            "contents": "client.draw_hitboxes(${1:entindex},${2:duration},${3:hitboxes},${4:r},${5:g},${6:b},${7:a},${8:tick})"
+        },
+        {
+            "trigger": "client.error_log",
+            "kind": "function",
+            "contents": "client.error_log(${1:msg})"
+        },
+        {
+            "trigger": "client.exec",
+            "kind": "function",
+            "details": "Executes a console command. Multiple commands can be combined with ';'. Be careful when passing user input (including usernames) to it.",
+            "contents": "client.exec(${1:cmd},${2:...})"
+        },
+        {
+            "trigger": "client.eye_position",
+            "kind": "function",
+            "details": "Returns x, y, z world coordinates of the local player's eye position, or nil on failure.",
+            "contents": "client.eye_position()"
+        },
+        {
+            "trigger": "client.find_signature",
+            "kind": "function",
+            "details": "Finds the specified pattern and returns a pointer to it, or nil if not found.",
+            "contents": "client.find_signature(${1:module_name},${2:pattern})"
+        },
+        {
+            "trigger": "client.get_model_name",
+            "kind": "function",
+            "details": "Returns model name, or nil on failure.",
+            "contents": "client.get_model_name(${1:model_index})"
+        },
+        {
+            "trigger": "client.key_state",
+            "kind": "function",
+            "details": "Returns true if the key is pressed, or nil on failure",
+            "contents": "client.key_state(${1:key})"
+        },
+        {
+            "trigger": "client.latency",
+            "kind": "function",
+            "details": "Returns your latency in seconds.",
+            "contents": "client.latency()"
+        },
+        {
+            "trigger": "client.log",
+            "kind": "function",
+            "details": "Logs a message to console in the [gamesense] format.",
+            "contents": "client.log(${1:msg},${2:...})"
+        },
+        {
+            "trigger": "client.random_float",
+            "kind": "function",
+            "details": "Returns a random float between minimum and maximum.",
+            "contents": "client.random_float(${1:minimum},${2:maximum})"
+        },
+        {
+            "trigger": "client.random_int",
+            "kind": "function",
+            "details": "Returns a random integer between minimum and maximum.",
+            "contents": "client.random_int(${1:minimum},${2:maximum})"
+        },
+        {
+            "trigger": "client.register_esp_flag",
+            "kind": "function",
+            "details": "Requires \"Flags\" is enabled in Player ESP",
+            "contents": "client.register_esp_flag(${1:flag},${2:r},${3:g},${4:b},${5:callback})"
+        },
+        {
+            "trigger": "client.reload_active_scripts",
+            "kind": "function",
+            "details": "Reloads all scripts the following frame.",
+            "contents": "client.reload_active_scripts()"
+        },
+        {
+            "trigger": "client.scale_damage",
+            "kind": "function",
+            "details": "Returns adjusted damage for the specified hitgroup",
+            "contents": "client.scale_damage(${1:entindex},${2:hitgroup},${3:damage})"
+        },
+        {
+            "trigger": "client.screen_size",
+            "kind": "function",
+            "details": "Returns (width, height).",
+            "contents": "client.screen_size()"
+        },
+        {
+            "trigger": "client.set_clan_tag",
+            "kind": "function",
+            "details": "The clan tag is removed if no argument is passed or if it is an empty string. Additional arguments will be concatenated similar to client.log.",
+            "contents": "client.set_clan_tag(${1:...})"
+        },
+        {
+            "trigger": "client.set_event_callback",
+            "kind": "function",
+            "details": "Raises an error and prints a message in console upon failure.",
+            "contents": "client.set_event_callback(${1:event_name},${2:callback})"
+        },
+        {
+            "trigger": "client.system_time",
+            "kind": "function",
+            "details": "Returns windows time as (hours, minutes, seconds, milliseconds)",
+            "contents": "client.system_time()"
+        },
+        {
+            "trigger": "client.timestamp",
+            "kind": "function",
+            "details": "Returns high precision timestamp in milliseconds.",
+            "contents": "client.timestamp()"
+        },
+        {
+            "trigger": "client.trace_bullet",
+            "kind": "function",
+            "details": "Returns entindex, damage. Entindex is nil when no player is hit or if players are skipped.",
+            "contents": "client.trace_bullet(${1:from_player},${2:from_x},${3:from_y},${4:from_z},${5:to_x},${6:to_y},${7:to_z},${8:skip_players})"
+        },
+        {
+            "trigger": "client.trace_line",
+            "kind": "function",
+            "details": "Returns fraction, entindex. fraction is a percentage in the range [0.0, 1.0] that tells you how far the trace went before hitting something, so 1.0 means nothing was hit. entindex is the entity index that hit, or -1 if no entity was hit.",
+            "contents": "client.trace_line(${1:skip_entindex},${2:from_x},${3:from_y},${4:from_z},${5:to_x},${6:to_y},${7:to_z})"
+        },
+        {
+            "trigger": "client.unix_time",
+            "kind": "function",
+            "details": "Returns current windows time as [unix time / epoch time](https://en.wikipedia.org/wiki/Unix_time) (seconds since 1 January 1970 00:00:00)",
+            "contents": "client.unix_time()"
+        },
+        {
+            "trigger": "client.unset_event_callback",
+            "kind": "function",
+            "details": "Removes a callback that was previously set using set_event_callback",
+            "contents": "client.unset_event_callback(${1:event_name},${2:callback})"
+        },
+        {
+            "trigger": "client.update_player_list",
+            "kind": "function",
+            "details": "Updates the player list tab without having to open it.",
+            "contents": "client.update_player_list()"
+        },
+        {
+            "trigger": "client.userid_to_entindex",
+            "kind": "function",
+            "details": "Returns the entity index, or 0 on failure.",
+            "contents": "client.userid_to_entindex(${1:userid})"
+        },
+        {
+            "trigger": "client.visible",
+            "kind": "function",
+            "details": "Returns true if the position is visible. For example, you could use a player's origin to see if they are visible.",
+            "contents": "client.visible(${1:x},${2:y},${3:z})"
+        },
+        {
+            "trigger": "config.export",
+            "kind": "function",
+            "details": "Returns the current config as a string",
+            "contents": "config.export()"
+        },
+        {
+            "trigger": "config.load",
+            "kind": "function",
+            "details": "To load the specified config: config.load('Config name here') To load a tab from the specified config: config.load('Config name here', 'Tab name here') To load a container from the specified config: config.load('Config name here', 'Tab name here', 'Container name here')",
+            "contents": "config.load(${1:name},${2:tab},${3:container})"
+        },
+        {
+            "trigger": "cvar_object:get_float",
+            "kind": "function",
+            "details": "Returns nil if called on a ConCommand.",
+            "contents": "cvar_object:get_float()"
+        },
+        {
+            "trigger": "cvar_object:get_int",
+            "kind": "function",
+            "details": "Returns nil if called on a ConCommand.",
+            "contents": "cvar_object:get_int()"
+        },
+        {
+            "trigger": "cvar_object:get_string",
+            "kind": "function",
+            "details": "Returns nil on failure.",
+            "contents": "cvar_object:get_string()"
+        },
+        {
+            "trigger": "cvar_object:invoke_callback",
+            "kind": "function",
+            "details": "Executes a ConCommand or cvar callback, passing its arguments to it",
+            "contents": "cvar_object:invoke_callback(${1:...})"
+        },
+        {
+            "trigger": "cvar_object:set_float",
+            "kind": "function",
+            "details": "Sets the int, float and string value to the passed float. Invokes the change callback",
+            "contents": "cvar_object:set_float(${1:value})"
+        },
+        {
+            "trigger": "cvar_object:set_int",
+            "kind": "function",
+            "details": "Sets the int, float and string value to the passed float. Invokes the change callback",
+            "contents": "cvar_object:set_int(${1:value})"
+        },
+        {
+            "trigger": "cvar_object:set_raw_float",
+            "kind": "function",
+            "details": "This sets the float value without changing the integer and string values.",
+            "contents": "cvar_object:set_raw_float(${1:value})"
+        },
+        {
+            "trigger": "cvar_object:set_raw_int",
+            "kind": "function",
+            "details": "This sets the integer value without changing the float and string values.",
+            "contents": "cvar_object:set_raw_int(${1:value})"
+        },
+        {
+            "trigger": "cvar_object:set_string",
+            "kind": "function",
+            "details": "Sets the int, float and string value to the passed float. Invokes the change callback",
+            "contents": "cvar_object:set_string(${1:value})"
+        },
+        {
+            "trigger": "database.read",
+            "kind": "function",
+            "details": "Gets a value from the database",
+            "contents": "database.read(${1:key_name})"
+        },
+        {
+            "trigger": "database.write",
+            "kind": "function",
+            "details": "Writes a value to the database. Avoid calling this often. For example, call read at script load, then call write during the 'shutdown' event",
+            "contents": "database.write(${1:key_name},${2:value})"
+        },
+        {
+            "trigger": "entity.get_all",
+            "kind": "function",
+            "details": "Returns an array of entity indices. Pass no arguments for all entities.",
+            "contents": "entity.get_all(${1:classname})"
+        },
+        {
+            "trigger": "entity.get_bounding_box",
+            "kind": "function",
+            "details": "Returns x1, y1, x2, y2, alpha_multiplier. The contents of x1, y1, x2, y2 must be ignored when alpha_multiplier is zero, which indicates that the bounding box is invalid and should not be drawn.",
+            "contents": "entity.get_bounding_box(${1:player})"
+        },
+        {
+            "trigger": "entity.get_classname",
+            "kind": "function",
+            "details": "Returns the name of the entity's class, or nil on failure.",
+            "contents": "entity.get_classname(${1:ent})"
+        },
+        {
+            "trigger": "entity.get_esp_data",
+            "kind": "function",
+            "details": "Returns a table containing alpha, health, and weapon_id, or nil on failure.",
+            "contents": "entity.get_esp_data(${1:player})"
+        },
+        {
+            "trigger": "entity.get_game_rules",
+            "kind": "function",
+            "details": "Returns entity index of CCSGameRulesProxy instance, or nil if none exists.",
+            "contents": "entity.get_game_rules()"
+        },
+        {
+            "trigger": "entity.get_local_player",
+            "kind": "function",
+            "details": "Returns the entity index for the local player, or nil on failure.",
+            "contents": "entity.get_local_player()"
+        },
+        {
+            "trigger": "entity.get_origin",
+            "kind": "function",
+            "details": "Returns the x, y, z coordinates of the entity. Only works for non-dormant entities, except for players, where it will return the dormant esp origin",
+            "contents": "entity.get_origin(${1:ent})"
+        },
+        {
+            "trigger": "entity.get_player_name",
+            "kind": "function",
+            "details": "Returns the player's name, or the string \"unknown\" on failure.",
+            "contents": "entity.get_player_name(${1:ent})"
+        },
+        {
+            "trigger": "entity.get_player_resource",
+            "kind": "function",
+            "details": "Returns entity index of CCSPlayerResource instance, or nil if none exists.",
+            "contents": "entity.get_player_resource()"
+        },
+        {
+            "trigger": "entity.get_player_weapon",
+            "kind": "function",
+            "details": "Returns the entity index of the player's active weapon, or nil if the player is not alive, dormant, etc.",
+            "contents": "entity.get_player_weapon(${1:ent})"
+        },
+        {
+            "trigger": "entity.get_players",
+            "kind": "function",
+            "details": "Returns an array of player entity indices. Dormant and dead players will not be added to the list.",
+            "contents": "entity.get_players(${1:enemies_only})"
+        },
+        {
+            "trigger": "entity.get_prop",
+            "kind": "function",
+            "details": "Returns the value of the property, or nil on failure. For vectors or angles, this returns three values.",
+            "contents": "entity.get_prop(${1:ent},${2:propname},${3:array_index})"
+        },
+        {
+            "trigger": "entity.get_steam64",
+            "kind": "function",
+            "details": "Returns steamID3, or nil on failure.",
+            "contents": "entity.get_steam64(${1:player})"
+        },
+        {
+            "trigger": "entity.hitbox_position",
+            "kind": "function",
+            "details": "Returns world coordinates x, y, z, or nil on failure.",
+            "contents": "entity.hitbox_position(${1:player},${2:hitbox})"
+        },
+        {
+            "trigger": "entity.is_alive",
+            "kind": "function",
+            "details": "Returns true if the player is not dead.",
+            "contents": "entity.is_alive(${1:ent})"
+        },
+        {
+            "trigger": "entity.is_dormant",
+            "kind": "function",
+            "details": "Returns true if the entity is dormant.",
+            "contents": "entity.is_dormant(${1:ent})"
+        },
+        {
+            "trigger": "entity.is_enemy",
+            "kind": "function",
+            "details": "Returns true if the entity is on the other team.",
+            "contents": "entity.is_enemy(${1:ent})"
+        },
+        {
+            "trigger": "entity.set_prop",
+            "kind": "function",
+            "details": "Sets the value of the property. For vectors or angles, pass three values.",
+            "contents": "entity.set_prop(${1:ent},${2:propname},${3:value},${4:array_index})"
+        },
+        {
+            "trigger": "globals.absoluteframetime",
+            "kind": "function",
+            "details": "Returns the number of seconds elapsed during the last game frame.",
+            "contents": "globals.absoluteframetime()"
+        },
+        {
+            "trigger": "globals.chokedcommands",
+            "kind": "function",
+            "details": "Returns the number of choked commands, i.e. the number of commands that haven't yet been sent to the server.",
+            "contents": "globals.chokedcommands()"
+        },
+        {
+            "trigger": "globals.commandack",
+            "kind": "function",
+            "details": "Returns the command number of the most recent server-acknowledged command.",
+            "contents": "globals.commandack()"
+        },
+        {
+            "trigger": "globals.curtime",
+            "kind": "function",
+            "details": "Returns the game time in seconds. This number is synchronized with the server.",
+            "contents": "globals.curtime()"
+        },
+        {
+            "trigger": "globals.framecount",
+            "kind": "function",
+            "details": "Returns the number of frames since the game started",
+            "contents": "globals.framecount()"
+        },
+        {
+            "trigger": "globals.frametime",
+            "kind": "function",
+            "details": "Returns the number of seconds elapsed during the last game frame.",
+            "contents": "globals.frametime()"
+        },
+        {
+            "trigger": "globals.lastoutgoingcommand",
+            "kind": "function",
+            "details": "Returns the command number of the last outgoing command.",
+            "contents": "globals.lastoutgoingcommand()"
+        },
+        {
+            "trigger": "globals.mapname",
+            "kind": "function",
+            "details": "Returns the name of the loaded map, or nil if you are not in game.",
+            "contents": "globals.mapname()"
+        },
+        {
+            "trigger": "globals.maxplayers",
+            "kind": "function",
+            "details": "Returns the maximum number of players in the server.",
+            "contents": "globals.maxplayers()"
+        },
+        {
+            "trigger": "globals.oldcommandack",
+            "kind": "function",
+            "details": "Returns the command number of the previous server-acknowledged command.",
+            "contents": "globals.oldcommandack()"
+        },
+        {
+            "trigger": "globals.realtime",
+            "kind": "function",
+            "details": "Returns the local time in seconds.",
+            "contents": "globals.realtime()"
+        },
+        {
+            "trigger": "globals.tickcount",
+            "kind": "function",
+            "details": "Returns the number of ticks elapsed in the server.",
+            "contents": "globals.tickcount()"
+        },
+        {
+            "trigger": "globals.tickinterval",
+            "kind": "function",
+            "details": "Returns the time elapsed in one game tick in seconds.",
+            "contents": "globals.tickinterval()"
+        },
+        {
+            "trigger": "json.decode_invalid_numbers",
+            "kind": "function",
+            "details": "Lua CJSON may generate an error when trying to decode numbers not supported by the JSON specification. Invalid numbers are defined as: infinity, not-a-number (NaN) or hexadecimal. The current value wil always be returned.",
+            "contents": "json.decode_invalid_numbers(${1:setting})"
+        },
+        {
+            "trigger": "json.decode_max_depth",
+            "kind": "function",
+            "details": "Lua CJSON will generate an error when parsing deeply nested JSON once the maximum array/object depth has been exceeded. This check prevents unnecessarily complicated JSON from slowing down the application, or crashing the application due to lack of process stack space.",
+            "contents": "json.decode_max_depth(${1:setting})"
+        },
+        {
+            "trigger": "json.encode_invalid_numbers",
+            "kind": "function",
+            "details": "Lua CJSON may generate an error when encoding floating point numbers not supported by the JSON specification (invalid numbers): infinity, not-a-number (NaN)",
+            "contents": "json.encode_invalid_numbers(${1:setting})"
+        },
+        {
+            "trigger": "json.encode_keep_buffer",
+            "kind": "function",
+            "details": "Lua CJSON can reuse the JSON encoding buffer to improve performance.",
+            "contents": "json.encode_keep_buffer(${1:setting})"
+        },
+        {
+            "trigger": "json.encode_max_depth",
+            "kind": "function",
+            "details": "Once the maximum table depth has been exceeded Lua CJSON will generate an error. This prevents a deeply nested or recursive data structure from crashing the application.",
+            "contents": "json.encode_max_depth(${1:depth})"
+        },
+        {
+            "trigger": "json.encode_number_precision",
+            "kind": "function",
+            "details": "The amount of significant digits returned by Lua CJSON when encoding numbers can be changed to balance accuracy versus performance. For data structures containing many numbers, setting cjson.encode_number_precision to a smaller integer, for example 3, can improve encoding performance by up to 50%.",
+            "contents": "json.encode_number_precision(${1:precision})"
+        },
+        {
+            "trigger": "json.encode_sparse_array",
+            "kind": "function",
+            "details": "Lua CJSON classifies a Lua table into one of three kinds when encoding a JSON array. This is determined by the number of values missing from the Lua array as follows:",
+            "contents": "json.encode_sparse_array(${1:convert},${2:ratio},${3:safe})"
+        },
+        {
+            "trigger": "json.parse",
+            "kind": "function",
+            "details": "json.parse will deserialise any UTF-8 JSON string into a Lua value or table. null will be converted to a NULL lightuserdata value. This can be compared with cjson.null for convenience.",
+            "contents": "json.parse(${1:json_text})"
+        },
+        {
+            "trigger": "json.stringify",
+            "kind": "function",
+            "details": "Will serialise a Lua value into a string containing the JSON representation.",
+            "contents": "json.stringify(${1:value})"
+        },
+        {
+            "trigger": "material_object:alpha_modulate",
+            "kind": "function",
+            "details": "Overrides the alpha of the material object it's called on. Doesn't work with some materials",
+            "contents": "material_object:alpha_modulate(${1:a})"
+        },
+        {
+            "trigger": "materialsystem.arms_material",
+            "kind": "function",
+            "details": "Returns a reference to the arms material when 'Viewmodel arms' is enabled",
+            "contents": "materialsystem.arms_material()"
+        },
+        {
+            "trigger": "materialsystem.chams_material",
+            "kind": "function",
+            "details": "Returns a reference to the player chams material",
+            "contents": "materialsystem.chams_material()"
+        },
+        {
+            "trigger": "material_object:color_modulate",
+            "kind": "function",
+            "details": "Overrides the color of the material object it's called on. Doesn't work with some materials",
+            "contents": "material_object:color_modulate(${1:r},${2:g},${3:b})"
+        },
+        {
+            "trigger": "materialsystem.find_material",
+            "kind": "function",
+            "details": "Returns a reference to the material",
+            "contents": "materialsystem.find_material(${1:path},${2:force_load})"
+        },
+        {
+            "trigger": "materialsystem.find_materials",
+            "kind": "function",
+            "details": "Returns a table of references to materials that have partial_path in their name",
+            "contents": "materialsystem.find_materials(${1:partial_path},${2:force_load})"
+        },
+        {
+            "trigger": "materialsystem.find_texture",
+            "kind": "function",
+            "details": "Returns a reference to the texture that can be used with set_shader_param",
+            "contents": "materialsystem.find_texture(${1:path})"
+        },
+        {
+            "trigger": "material_object:get_material_var_flag",
+            "kind": "function",
+            "details": "Returns the boolean value of the material var flag",
+            "contents": "material_object:get_material_var_flag(${1:material_var_flag})"
+        },
+        {
+            "trigger": "materialsystem.get_model_materials",
+            "kind": "function",
+            "details": "Returns a table of references to materials used by the entity",
+            "contents": "materialsystem.get_model_materials(${1:entindex})"
+        },
+        {
+            "trigger": "material_object:get_name",
+            "kind": "function",
+            "details": "Returns name of the material",
+            "contents": "material_object:get_name()"
+        },
+        {
+            "trigger": "material_object:get_shader_param",
+            "kind": "function",
+            "details": "Returns the value of the shader param or nil",
+            "contents": "material_object:get_shader_param(${1:shader_param})"
+        },
+        {
+            "trigger": "materialsystem.override_material",
+            "kind": "function",
+            "details": "Overrides all of a material properties with another material.",
+            "contents": "materialsystem.override_material(${1:material},${2:material_new})"
+        },
+        {
+            "trigger": "material_object:reload",
+            "kind": "function",
+            "details": "Restores the original material properties of the material it's called on.",
+            "contents": "material_object:reload()"
+        },
+        {
+            "trigger": "material_object:set_material_var_flag",
+            "kind": "function",
+            "details": "Sets the value of the material var flag of the material",
+            "contents": "material_object:set_material_var_flag(${1:material_var_flag},${2:value})"
+        },
+        {
+            "trigger": "material_object:set_shader_param",
+            "kind": "function",
+            "details": "Sets the value of the shader param of the material",
+            "contents": "material_object:set_shader_param(${1:shader_param},${2:value})"
+        },
+        {
+            "trigger": "panorama.loadstring",
+            "kind": "function",
+            "contents": "panorama.loadstring(${1:js_code},${2:panel})"
+        },
+        {
+            "trigger": "panorama.open",
+            "kind": "function",
+            "contents": "panorama.open(${1:panel})"
+        },
+        {
+            "trigger": "plist.get",
+            "kind": "function",
+            "contents": "plist.get(${1:entindex},${2:field})"
+        },
+        {
+            "trigger": "plist.set",
+            "kind": "function",
+            "contents": "plist.set(${1:entindex},${2:field},${3:value})"
+        },
+        {
+            "trigger": "renderer.circle",
+            "kind": "function",
+            "details": "This can only be called from the paint callback.",
+            "contents": "renderer.circle(${1:x},${2:y},${3:r},${4:g},${5:b},${6:a},${7:radius},${8:start_degrees},${9:percentage})"
+        },
+        {
+            "trigger": "renderer.circle_outline",
+            "kind": "function",
+            "details": "This can only be called from the paint callback.",
+            "contents": "renderer.circle_outline(${1:x},${2:y},${3:r},${4:g},${5:b},${6:a},${7:radius},${8:start_degrees},${9:percentage},${10:thickness})"
+        },
+        {
+            "trigger": "renderer.gradient",
+            "kind": "function",
+            "details": "This can only be called from the paint callback.",
+            "contents": "renderer.gradient(${1:x},${2:y},${3:w},${4:h},${5:r1},${6:g1},${7:b1},${8:a1},${9:r2},${10:g2},${11:b2},${12:a2},${13:ltr})"
+        },
+        {
+            "trigger": "renderer.indicator",
+            "kind": "function",
+            "details": "Returns the Y screen coordinate (vertical offset) of the drawn text, or nil on failure. This can only be called from the paint callback.",
+            "contents": "renderer.indicator(${1:r},${2:g},${3:b},${4:a},${5:...})"
+        },
+        {
+            "trigger": "renderer.line",
+            "kind": "function",
+            "details": "This can only be called from the paint callback.",
+            "contents": "renderer.line(${1:xa},${2:ya},${3:xb},${4:yb},${5:r},${6:g},${7:b},${8:a})"
+        },
+        {
+            "trigger": "renderer.load_jpg",
+            "kind": "function",
+            "details": "Loads a texture from raw JPG contents (with file header). Returns a texture ID that can be used with renderer.texture, or nil on failure",
+            "contents": "renderer.load_jpg(${1:contents},${2:width},${3:height})"
+        },
+        {
+            "trigger": "renderer.load_png",
+            "kind": "function",
+            "details": "Loads a texture from raw png contents (with file header). Returns a texture ID that can be used with renderer.texture, or nil on failure",
+            "contents": "renderer.load_png(${1:contents},${2:width},${3:height})"
+        },
+        {
+            "trigger": "renderer.load_rgba",
+            "kind": "function",
+            "details": "Loads a texture from a RGBA buffer. Returns a texture ID that can be used with renderer.texture, or nil on failure",
+            "contents": "renderer.load_rgba(${1:contents},${2:width},${3:height})"
+        },
+        {
+            "trigger": "renderer.load_svg",
+            "kind": "function",
+            "details": "Returns a texture ID that can be used with renderer.texture, or nil on failure",
+            "contents": "renderer.load_svg(${1:contents},${2:width},${3:height})"
+        },
+        {
+            "trigger": "renderer.measure_text",
+            "kind": "function",
+            "details": "Returns width, height. This can only be called from the paint callback.",
+            "contents": "renderer.measure_text(${1:flags},${2:...})"
+        },
+        {
+            "trigger": "renderer.rectangle",
+            "kind": "function",
+            "details": "This can only be called from the paint callback.",
+            "contents": "renderer.rectangle(${1:x},${2:y},${3:w},${4:h},${5:r},${6:g},${7:b},${8:a})"
+        },
+        {
+            "trigger": "renderer.text",
+            "kind": "function",
+            "details": "This can only be called from the paint callback.",
+            "contents": "renderer.text(${1:x},${2:y},${3:r},${4:g},${5:b},${6:a},${7:flags},${8:max_width},${9:...})"
+        },
+        {
+            "trigger": "renderer.texture",
+            "kind": "function",
+            "details": "Draws a texture from the texture id created from load_rgba, load_png, load_jpg or load_svg",
+            "contents": "renderer.texture(${1:id},${2:x},${3:y},${4:w},${5:h},${6:r},${7:g},${8:b},${9:a},${10:mode})"
+        },
+        {
+            "trigger": "renderer.triangle",
+            "kind": "function",
+            "details": "This can only be called from the paint callback.",
+            "contents": "renderer.triangle(${1:x0},${2:y0},${3:x1},${4:y1},${5:x2},${6:y2},${7:r},${8:g},${9:b},${10:a})"
+        },
+        {
+            "trigger": "renderer.world_to_screen",
+            "kind": "function",
+            "details": "Returns two screen coordinates (x, y), or nil if the world position is not visible on your screen. This can only be called from the paint callback.",
+            "contents": "renderer.world_to_screen(${1:x},${2:y},${3:z})"
+        },
+        {
+            "trigger": "ui.get",
+            "kind": "function",
+            "details": "For a checkbox, returns true or false. For a slider, returns an integer. For a combobox, returns a string. For a multiselect combobox, returns an array of strings. For a hotkey, returns true if the hotkey is active. For a color picker, returns r, g, b, a. Throws an error on failure.",
+            "contents": "ui.get(${1:item})"
+        },
+        {
+            "trigger": "ui.is_menu_open",
+            "kind": "function",
+            "details": "Returns true if the menu is currently open.",
+            "contents": "ui.is_menu_open()"
+        },
+        {
+            "trigger": "ui.menu_position",
+            "kind": "function",
+            "details": "Returns the x, y of the menu, even when closed.",
+            "contents": "ui.menu_position()"
+        },
+        {
+            "trigger": "ui.menu_size",
+            "kind": "function",
+            "details": "Returns the width, height of the menu, even when closed.",
+            "contents": "ui.menu_size()"
+        },
+        {
+            "trigger": "ui.mouse_position",
+            "kind": "function",
+            "details": "Returns current mouse coordinates x, y",
+            "contents": "ui.mouse_position()"
+        },
+        {
+            "trigger": "ui.name",
+            "kind": "function",
+            "details": "Returns the display name",
+            "contents": "ui.name(${1:item})"
+        },
+        {
+            "trigger": "ui.new_button",
+            "kind": "function",
+            "details": "Throws an error on failure. The return value should not be used with ui.set or ui.get.",
+            "contents": "ui.new_button(${1:tab},${2:container},${3:name},${4:callback})"
+        },
+        {
+            "trigger": "ui.new_checkbox",
+            "kind": "function",
+            "details": "Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.",
+            "contents": "ui.new_checkbox(${1:tab},${2:container},${3:name})"
+        },
+        {
+            "trigger": "ui.new_color_picker",
+            "kind": "function",
+            "details": "Throws an error on failure. The color picker is placed to the right of the previous menu item.",
+            "contents": "ui.new_color_picker(${1:tab},${2:container},${3:name},${4:r},${5:g},${6:b},${7:a})"
+        },
+        {
+            "trigger": "ui.new_combobox",
+            "kind": "function",
+            "details": "Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.",
+            "contents": "ui.new_combobox(${1:tab},${2:container},${3:name},${4:...})"
+        },
+        {
+            "trigger": "ui.new_hotkey",
+            "kind": "function",
+            "details": "Returns a special value that can be passed to ui.get to see if the hotkey is pressed, or throws an error on failure.",
+            "contents": "ui.new_hotkey(${1:tab},${2:container},${3:name},${4:inline},${5:default_hotkey})"
+        },
+        {
+            "trigger": "ui.new_label",
+            "kind": "function",
+            "details": "Creates a new label, this can be used to make otherwise attached menu items standalone or have interactive menus. Returns a special value that can be passed to ui.set, or throws an error on failure.",
+            "contents": "ui.new_label(${1:tab},${2:container},${3:name})"
+        },
+        {
+            "trigger": "ui.new_listbox",
+            "kind": "function",
+            "details": "Throws an error on failure. Returns a special value that can be used with ui.get. Calling ui.get on a listbox will return the zero-based index of the currently selected string.",
+            "contents": "ui.new_listbox(${1:tab},${2:container},${3:name},${4:items})"
+        },
+        {
+            "trigger": "ui.new_multiselect",
+            "kind": "function",
+            "details": "Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.",
+            "contents": "ui.new_multiselect(${1:tab},${2:container},${3:name},${4:...})"
+        },
+        {
+            "trigger": "ui.new_slider",
+            "kind": "function",
+            "details": "Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.",
+            "contents": "ui.new_slider(${1:tab},${2:container},${3:name},${4:min},${5:max},${6:init_value},${7:show_tooltip},${8:unit},${9:scale},${10:tooltips})"
+        },
+        {
+            "trigger": "ui.new_string",
+            "kind": "function",
+            "details": "Creates a string UI element, can be used to store arbitrary strings in configs. No menu item is created but it has the same semantics as other ui.new_* functions. Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.",
+            "contents": "ui.new_string(${1:name},${2:default_value})"
+        },
+        {
+            "trigger": "ui.new_textbox",
+            "kind": "function",
+            "details": "Throws an error on failure. Returns a special value that can be used with ui.get",
+            "contents": "ui.new_textbox(${1:tab},${2:container},${3:name})"
+        },
+        {
+            "trigger": "ui.reference",
+            "kind": "function",
+            "details": "Avoid calling this from inside a function. Returns a reference that can be passed to ui.get and ui.set, or throws an error on failure. This allows you to access a built-in pre-existing menu items. This function returns multiple values when the specified menu item is followed by unnamed menu items, for example a color picker or a hotkey.",
+            "contents": "ui.reference(${1:tab},${2:container},${3:name})"
+        },
+        {
+            "trigger": "ui.set",
+            "kind": "function",
+            "details": "For checkboxes, pass true or false. For a slider, pass a number that is within the slider's minimum/maximum values. For a combobox, pass a string value. For a multiselect combobox, pass zero or more strings. For referenced buttons, value is ignored and the button's callback is invoked. For color pickers, pass the arguments r, g, b, a.",
+            "contents": "ui.set(${1:item},${2:value},${3:...})"
+        },
+        {
+            "trigger": "ui.set_callback",
+            "kind": "function",
+            "details": "Sets the change callback of a custom menu item. It will be executed on change and passed the reference",
+            "contents": "ui.set_callback(${1:item},${2:callback})"
+        },
+        {
+            "trigger": "ui.set_visible",
+            "kind": "function",
+            "details": "Sets the visibility of the menu item",
+            "contents": "ui.set_visible(${1:item},${2:visible})"
+        },
+        {
+            "trigger": "ui.update",
+            "kind": "function",
+            "details": "Creates a string UI element, can be used to store arbitrary strings in configs. No menu item is created but it has the same semantics as other ui.new_* functions. Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.",
+            "contents": "ui.update(${1:item},${2:value},${3:...})"
+        },
+        {
+            "trigger": "vector_object:angles",
+            "kind": "function",
+            "details": "Converts the vector to an angle and returns the pitch, yaw and roll",
+            "contents": "vector_object:angles()"
+        },
+        {
+            "trigger": "vector_object:dist2d",
+            "kind": "function",
+            "details": "Returns the cross product / vector product of itself and another vector",
+            "contents": "vector_object:dist2d(${1:other})"
+        },
+        {
+            "trigger": "vector_object:dist",
+            "kind": "function",
+            "details": "Returns the 3d distance to another vector",
+            "contents": "vector_object:dist(${1:other})"
+        },
+        {
+            "trigger": "vector_object:dist",
+            "kind": "function",
+            "details": "Returns the 2d distance to another vector",
+            "contents": "vector_object:dist(${1:other})"
+        },
+        {
+            "trigger": "vector_object:dot",
+            "kind": "function",
+            "details": "Returns the dot product of the vector",
+            "contents": "vector_object:dot()"
+        },
+        {
+            "trigger": "vector_object:init",
+            "kind": "function",
+            "details": "Overwrites the X, Y and Z coordinates of the vector object, returning itself",
+            "contents": "vector_object:init(${1:x},${2:y},${3:z})"
+        },
+        {
+            "trigger": "vector_object:init_from_angles",
+            "kind": "function",
+            "details": "Converts the pitch, yaw and roll passed to a forward vector and overwrites the X, Y and Z coordinates with that. Returns itself",
+            "contents": "vector_object:init_from_angles(${1:pitch},${2:yaw},${3:roll})"
+        },
+        {
+            "trigger": "vector_object:length",
+            "kind": "function",
+            "details": "Returns the length (magnitude)",
+            "contents": "vector_object:length()"
+        },
+        {
+            "trigger": "vector_object:length2d",
+            "kind": "function",
+            "details": "Returns the 2d length (X and Y components)",
+            "contents": "vector_object:length2d()"
+        },
+        {
+            "trigger": "vector_object:length2dsqr",
+            "kind": "function",
+            "details": "Returns the squared 2d length (X and Y components, faster than :length2d)",
+            "contents": "vector_object:length2dsqr()"
+        },
+        {
+            "trigger": "vector_object:lengthsqr",
+            "kind": "function",
+            "details": "Returns the squared length (faster than :length)",
+            "contents": "vector_object:lengthsqr()"
+        },
+        {
+            "trigger": "vector_object:lerp",
+            "kind": "function",
+            "details": "Interpolates by the specified percentage between the 2 vectors.",
+            "contents": "vector_object:lerp(${1:to},${2:percentage})"
+        },
+        {
+            "trigger": "vector_object:normalize",
+            "kind": "function",
+            "details": "Normalizes the vector, dividing it by it's own length (resulting in a unit vector with length = 1)",
+            "contents": "vector_object:normalize()"
+        },
+        {
+            "trigger": "vector_object:normalized",
+            "kind": "function",
+            "details": "Returns a new unit vector, divided it by it's own length",
+            "contents": "vector_object:normalized()"
+        },
+        {
+            "trigger": "vector_object:scale",
+            "kind": "function",
+            "details": "Scales the vector by the specified value.",
+            "contents": "vector_object:scale(${1:scalar})"
+        },
+        {
+            "trigger": "vector_object:scaled",
+            "kind": "function",
+            "details": "Returns a new vector, scaled by the specified value.",
+            "contents": "vector_object:scaled(${1:scalar})"
+        },
+        {
+            "trigger": "vector_object:to",
+            "kind": "function",
+            "details": "Returns the forward vector from itself to another vector",
+            "contents": "vector_object:to(${1:other})"
+        },
+        {
+            "trigger": "vector_object:unpack",
+            "kind": "function",
+            "details": "Returns the X, Y and Z coordinate of the vector object. They can also be accessed by vec.x, vec.y, etc",
+            "contents": "vector_object:unpack()"
+        },
+        {
+            "trigger": "vector",
+            "kind": "function",
+            "details": "Creates a new vector object. Please note that you need to load the built-in vector library with require \"vector\"",
+            "contents": "vector(${1:x},${2:y},${3:z})"
+        },
+        {
+            "trigger": "vector_object:vectors",
+            "kind": "function",
+            "details": "Returns the right and up vector of a forward vector",
+            "contents": "vector_object:vectors()"
+        }
+    ]
+}
